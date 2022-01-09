@@ -1,44 +1,46 @@
-import React from 'react';
-// import styled from 'styled-components'
-import ImageListItem from '@mui/material/ImageListItem';
-import ImageListItemBar from '@mui/material/ImageListItemBar';
-import CssBaseline from '@mui/material/CssBaseline';
-import Box from '@mui/material/Box';
-import Container from '@mui/material/Container';
-
-
-// const ImageContainerStyles = styled.imageContainerStyles`
+import React , {useState} from 'react';
+import '../styles/ImageContainer.css'
+import Button from '@mui/material/Button';
 
 
 
-// `
+const ImageContainer = ({image, addLikedItem, deleteLikedItem}) => {
 
+    const [liked, setliked] = useState(false)
+    
+    const handleOnLike = (event) => {
+        event.preventDefault()
+		addLikedItem(image);
+        setliked(true)
+		
+	}
 
-const ImageContainer = (props) => {
+    const handleDisLike = (event) => {
+        event.preventDefault()
+		deleteLikedItem(image.id);
+        setliked(false)
+		
+	}
 
     return(
-        // <ImageListItem key={props.image.id}>
-            // <img
-            //     src={`${props.image.img_src}?w=164&h=164&fit=crop&auto=format`}
-            //     // srcSet={`${props.image.img_src}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
-            //     alt={props.image.id}
-            //     loading="lazy"
-            // />  
-        //     <ImageListItemBar
-        //         title={<span>Rover name: {props.image.rover.name}</span>}
-        //         subtitle={<span>Camera Name: {props.image.camera.full_name}</span>}
-        //         position="below"
-        //     />
-        // </ImageListItem>
-        <Container fixed>
-            {/* <Box sx={{ bgcolor: '#cfe8fc', height: '100vh' }} /> */}
+        <div className="imageContainer__container">
+            <h4 className="imageContainer__cameraName"><strong>Camera name:</strong> {image.camera.full_name}</h4>
             <img
-                src={`${props.image.img_src}?w=50&h=50&fit=crop&auto=format`}
-                // srcSet={`${props.image.img_src}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
-                alt={props.image.id}
-                loading="lazy"
-            />  
-        </Container>        
+                className="imageContainer__image"
+                src={image.img_src}
+                alt={image.id}
+            />
+            <h5 className="imageContainer__roverName"><strong>Rover name:</strong> {image.rover.name}</h5>
+            <h5 className="imageContainer__date"><strong>Date:</strong> {image.earth_date}</h5>
+            
+            <span>{liked ? <Button onClick={handleDisLike} >Unlike</Button> : <Button onClick={handleOnLike}>Like</Button>}</span>
+            
+
+        </div>
+
+
+
+               
     )
 }
 export default ImageContainer

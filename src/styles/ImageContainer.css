@@ -1,0 +1,34 @@
+.imageContainer__container {
+    max-width: 500px;
+    background-color: blanchedalmond;
+    border: 1px solid lightgrey;
+    margin-bottom: 45px;
+    border-radius: 18px;
+    text-align: center;
+    
+
+}
+
+
+.imageContainer__image {
+ width: 100%;
+ object-fit: contain;
+ border-top: 1px solid lightgrey;
+ border-bottom: 1px solid lightgrey;
+ border-radius: 5px;
+
+
+}
+
+.imageContainer__cameraName {
+    font-weight : normal;
+    padding: 15px ;
+}
+
+.imageContainer__roverName {
+    font-weight : normal;
+}
+
+.imageContainer__date {
+    font-weight : normal;
+}

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import ImageContainer from './ImageContainer'
-import { ImageList } from '@mui/material';
+import '../styles/ImageFeed.css'
 
 
 export default class ImageFeed extends Component {
@@ -8,8 +8,29 @@ export default class ImageFeed extends Component {
         super()
         this.state = {
             items: [],
+            likedItems: [],
             isLoaded: false
         }
+    }
+
+    addLikedItem = (item) =>{
+		let new_liked_items = [...this.state.likedItems, item];
+		this.setState({
+			likedItems: new_liked_items
+		})
+
+	}
+    deletedLikedItem = (id) =>{
+
+        let new_liked_items = this.state.likedItems.filter( t =>{
+            if(t.id == id){ return false}
+            else{return true}
+        })
+
+        this.setState({
+            likedItems: new_liked_items
+        })
+
     }
 
 
@@ -37,9 +58,9 @@ export default class ImageFeed extends Component {
         }
         else{
             return (
-                <div>
+                <div className="imageFeed__feed">
                     {items.photos.map(imageData => {
-                        return (<ImageContainer image={imageData}/>)
+                        return (<ImageContainer deleteLikedItem={this.deletedLikedItem} addLikedItem={this.addLikedItem} image={imageData}/>)
                     })}
                 </div>
                 

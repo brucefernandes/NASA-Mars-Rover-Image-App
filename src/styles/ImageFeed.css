@@ -1,13 +1,11 @@
 .imageFeed__feed {
   margin-left: 500px;
-  width: 75%;
   margin-top: 25px;
 
 }
 
 .imageFeed__counter {
   float: left;
-  width: 10%;
   object-fit: contain;
   width: 70px;
   height: 70px;

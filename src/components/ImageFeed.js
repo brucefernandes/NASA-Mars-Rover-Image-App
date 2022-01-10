@@ -11,7 +11,7 @@ export default class ImageFeed extends Component {
         this.state = {
             items: [],
             likedItems: [],
-            isLoaded: false
+            isLoaded: false,
         }
     }
 
@@ -53,7 +53,7 @@ export default class ImageFeed extends Component {
     
 
     render() {
-        let { items , isLoaded, likedItems} = this.state;
+        let { items , isLoaded} = this.state;
 
         if (!isLoaded) {
             return <div>Loading...</div>
@@ -64,7 +64,7 @@ export default class ImageFeed extends Component {
                     <span>
                         <div className="imageFeed__counter">
                             <FavoriteIcon fontSize="large" style={{fill: "#f2495a"}}/>
-                            <div className="imageFeed_counter_text">{likedItems.length}</div>
+                            <div className="imageFeed_counter_text">{localStorage.length}</div>
 
                         </div>
                         <div className="imageFeed__feed">

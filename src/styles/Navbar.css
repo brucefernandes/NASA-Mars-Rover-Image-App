@@ -1,4 +1,5 @@
 .navbar__appbar {
     border-bottom: 500px;
     color: chocolate;
+    position: fixed;
 }

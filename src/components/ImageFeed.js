@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import ImageContainer from './ImageContainer'
 import '../styles/ImageFeed.css'
+import FavoriteIcon from '@mui/icons-material/Favorite';
+
 
 
 export default class ImageFeed extends Component {
@@ -51,18 +53,29 @@ export default class ImageFeed extends Component {
     
 
     render() {
-        let { items , isLoaded} = this.state;
+        let { items , isLoaded, likedItems} = this.state;
 
         if (!isLoaded) {
             return <div>Loading...</div>
         }
         else{
             return (
-                <div className="imageFeed__feed">
-                    {items.photos.map(imageData => {
-                        return (<ImageContainer deleteLikedItem={this.deletedLikedItem} addLikedItem={this.addLikedItem} image={imageData}/>)
-                    })}
+                <div>
+                    <span>
+                        <div className="imageFeed__counter">
+                            <FavoriteIcon fontSize="large" style={{fill: "#f2495a"}}/>
+                            <div className="imageFeed_counter_text">{likedItems.length}</div>
+
+                        </div>
+                        <div className="imageFeed__feed">
+                            {items.photos.map(imageData => {
+                                return (<ImageContainer deleteLikedItem={this.deletedLikedItem} addLikedItem={this.addLikedItem} image={imageData}/>)
+                            })}
+                        </div>
+                    </span>
+
                 </div>
+
                 
                 
             )

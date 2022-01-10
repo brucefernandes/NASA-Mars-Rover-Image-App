@@ -1,4 +1,26 @@
 .imageFeed__feed {
-  margin-top: 25px;
   margin-left: 500px;
+  width: 75%;
+  margin-top: 25px;
+
+}
+
+.imageFeed__counter {
+  float: left;
+  width: 10%;
+  object-fit: contain;
+  width: 70px;
+  height: 70px;
+  background: #f7f5f5;
+  border: 1px solid lightgray;
+  border-radius: 50%;
+  margin-left: 1%;
+  position: fixed;
+
+}
+.imageFeed_counter_text{
+  height: 12px; 
+  min-width: 9px;
+  padding: 1px 3px 0 5px;
+  text-align: center;
 }

@@ -6,7 +6,7 @@ The application can be viewed right [here](https://nasa-rover-image-feed.herokua
 
 The application uses [NASA's Mars Rover API](https://api.nasa.gov/) to fetch the first 25 images and displays
 them using React components. Each component is styled using MaterialUI. The application allows the user to like and unlike
-images while displayed the total number of liked images on a counter. This counter's position is fixed on the left side of 
+images while displaying the total number of liked images on a counter. This counter's position is fixed on the left side of 
 the application so it can be viewed as the user decides what images they want to like/dislike. 
 
 When a user likes an image, a key/value pair of image id and the state of the component (liked/disliked) is stored in localStorage.

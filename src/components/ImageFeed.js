@@ -17,6 +17,7 @@ export default class ImageFeed extends Component {
 
     addLikedItem = (item) =>{
 		let new_liked_items = [...this.state.likedItems, item];
+        localStorage.setItem(JSON.stringify(item.id), JSON.stringify(true));
 		this.setState({
 			likedItems: new_liked_items
 		})
@@ -28,6 +29,7 @@ export default class ImageFeed extends Component {
             if(t.id == id){ return false}
             else{return true}
         })
+        localStorage.removeItem(JSON.stringify(id))
 
         this.setState({
             likedItems: new_liked_items

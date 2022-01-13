@@ -7,7 +7,7 @@ const Navbar = () => {
 
     return (
         <div>
-            <AppBar className="navbar_appbar" position="static" style={{backgroundColor: '#130c4a', boxShadow: "0px 0 px 0px 0px"}}>
+            <AppBar className="navbar_appbar" position="fixed" style={{backgroundColor: '#130c4a', boxShadow: "0px 0 px 0px 0px"}}>
                         <Toolbar>
                             <Typography>NASA Rover Image Feed</Typography>
                             <Tabs indicatorColor='secondary'  textColor='inherit' >

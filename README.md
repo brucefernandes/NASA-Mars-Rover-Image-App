@@ -16,8 +16,9 @@ This allows the user to still view their liked/unliked images even if the browse
 
 1. Clone the repo
 2. Run 'npm install' to install the node_module dependencies 
-3. Run 'npm start' to start the app
-4. Go to [localhost:8080](http://localhost:8080/) 
+3. Run 'npm run build'
+4. Run 'npm start' to start the app
+5. Go to [localhost:8080](http://localhost:8080/) 
 
 ## Challenge Features Implemented
 - Animated like button

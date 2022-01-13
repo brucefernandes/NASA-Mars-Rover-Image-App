@@ -1,7 +1,7 @@
 .imageFeed__feed {
   margin-left: 500px;
   margin-top: 25px;
-  padding-top: 40px;
+  padding-top: 60px;
 }
 
 .imageFeed__counter {
@@ -14,6 +14,8 @@
   border-radius: 50%;
   margin-left: 1%;
   position: fixed;
+  padding-top: 60px;
+
 
 }
 .imageFeed_counter_text{

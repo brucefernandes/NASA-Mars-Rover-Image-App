@@ -1,6 +1,6 @@
 # NASA Mars Rover Image App!
 
-The purpose of this application is to complete the Shopify front-end developer 2022 challenge.
+
 The application is built with ReactJS and MaterialUI and is hosted using nodejs and heroku.
 The application can be viewed right [here](https://nasa-rover-image-feed.herokuapp.com/)
 
